@@ -1,0 +1,31 @@
+header,
+movies,
+footer,
+{
+    display: block;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+header {
+    align-content: center;
+    color: aliceblue;
+    background-color: blue;
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+    text-align: center;
+    font-size: 25px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    padding: 15px;
+}
