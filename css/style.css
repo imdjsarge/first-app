@@ -6,7 +6,6 @@ body {
 header {
     align-content: center;
     color: black;
-
     text-align: center;
     font-size: 30px;
     text-decoration-color: black;
@@ -22,14 +21,15 @@ p {
 }
 
 #movies h1 {
- margin-left: 20px;   
-    color:azure;
+    margin-left: 20px;
+    color: azure;
 }
 
 #movies h3 {
- margin-left: 20px; 
-      color:azure;
+    margin-left: 20px;
+    color: azure;
 }
+
 #movies img {
     padding: 10px 10px 10px 10px;
     margin-left: 20px;
