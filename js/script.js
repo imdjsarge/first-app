@@ -50,7 +50,6 @@
                     ]
     };
 
-
     var favorite_movies = fav_movies.movies;
     for (i = 0; i < favorite_movies.length; i++) {
         my_movies = fav_movies.movies[i];
@@ -61,16 +60,10 @@
         new_movies.appendChild(movie);
         movie_names.appendChild(new_movies);
 
-
-
-
         movie_img = document.getElementById("movies");
         var new_images = document.createElement("img");
         new_images.setAttribute("src", my_movies.image);
         movie_img.appendChild(new_images);
-
-
-
 
         movie_genre = document.getElementById("movies");
         var new_genre = document.createElement("h3");
@@ -78,15 +71,6 @@
         new_genre.appendChild(genre);
         movie_genre.appendChild(new_genre);
 
-
-
-
-
-
-
     }
-
-
-
 
 }());
