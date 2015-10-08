@@ -66,7 +66,7 @@
         movie_img.appendChild(new_images);
 
         movie_genre = document.getElementById("movies");
-        var new_genre = document.createElement("h3");
+        var new_genre = document.createElement("h2");
         var genre = document.createTextNode(my_movies.genre);
         new_genre.appendChild(genre);
         movie_genre.appendChild(new_genre);

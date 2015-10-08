@@ -16,24 +16,24 @@ p {
     font-size: 25px;
 }
 
-#movies {
-    align-content: center;
-}
 
 #movies h1 {
     margin-left: 20px;
     color: azure;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-#movies h3 {
+#movies h2 {
     margin-left: 20px;
     color: azure;
+    font-style: italic;
 }
 
 #movies img {
     padding: 10px 10px 10px 10px;
     margin-left: 20px;
     background-color: black;
+    
 }
 
 footer {
