@@ -1,23 +1,33 @@
-
 body {
-
+    background-color: darkgray;
     margin-bottom: 30px;
 }
+
 header {
     align-content: center;
     color: black;
-
+    background-blend-mode: color;
+    background-color: #cccccc;
     text-align: center;
     font-size: 30px;
     text-decoration-color: black;
 }
+
 p {
     text-align: center;
     font-size: 25px;
 }
-#movies {
 
+#movies {
     align-content: center;
+}
+
+#movies h1 {
+ margin-left: 20px;   
+}
+
+#movies h3 {
+ margin-left: 20px;   
 }
 #movies img {
     padding: 10px 10px 10px 10px;
@@ -25,11 +35,12 @@ p {
     background-color: black;
     display: block;
 }
+
 footer {
     position: fixed;
     bottom: 0;
     margin-bottom: 0px;
-    height: 0px; 
+    height: 0px;
     width: 100%;
     padding: 20px;
     text-align: center;

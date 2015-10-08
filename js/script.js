@@ -4,7 +4,7 @@
         "movies": [
             {
 
-                "name": "Forest Gump",
+                "name": "Forrest Gump",
                 "genre": "Drama",
                 "image": "images/forest_gump.jpg",
         },
@@ -58,16 +58,9 @@
         movie_names = document.getElementById("movies");
         var new_movies = document.createElement("h1");
         var movie = document.createTextNode(my_movies.name);
-        movie_names.appendChild(movie);
+        new_movies.appendChild(movie);
+        movie_names.appendChild(new_movies);
 
-        line_break = document.getElementById("movies");
-        var linebreak = document.createElement("br");
-        line_break.appendChild(linebreak);
-
-
-        line_break = document.getElementById("movies");
-        var linebreak = document.createElement("br");
-        line_break.appendChild(linebreak);
 
 
 
@@ -77,23 +70,15 @@
         movie_img.appendChild(new_images);
 
 
-        line_break = document.getElementById("movies");
-        var linebreak = document.createElement("br");
-        line_break.appendChild(linebreak);
 
 
         movie_genre = document.getElementById("movies");
-        var new_genre = document.createElement("h4");
+        var new_genre = document.createElement("h3");
         var genre = document.createTextNode(my_movies.genre);
-        movie_genre.appendChild(genre);
+        new_genre.appendChild(genre);
+        movie_genre.appendChild(new_genre);
 
-        line_break = document.getElementById("movies");
-        var linebreak = document.createElement("br");
-        line_break.appendChild(linebreak);
 
-        line_break = document.getElementById("movies");
-        var linebreak = document.createElement("br");
-        line_break.appendChild(linebreak);
 
 
 
