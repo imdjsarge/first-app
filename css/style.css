@@ -35,6 +35,14 @@ p {
     align-content: center;
 }
 
+#movies iframe {
+    
+    float: none;
+    padding: 10px 10px 10px 10px;
+    background-color: black;
+    
+}
+
 footer {
     position: fixed;
     bottom: 0;
