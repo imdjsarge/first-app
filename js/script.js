@@ -9,9 +9,9 @@
     var save = document.getElementById("save");
     var clear = document.getElementById("clear");
 
-    function buildMovieData(movies) {
+    function buildMovies(movies) {
 
-        var youTubeEmbed = "https://www.youtube.com/embed/"
+
 
         movie_names = document.getElementById("movies");
         var new_movies = document.createElement("h1");
@@ -30,7 +30,7 @@
         new_genre.appendChild(genre);
         movie_genre.appendChild(new_genre);
 
-
+        var youTubeEmbed = "https://www.youtube.com/embed/"
 
         videos = document.getElementById("movies");
         var new_video = document.createElement("iframe");
@@ -38,7 +38,9 @@
         videos.setAttribute("allowfullscreen", "allowfullscreen");
         new_video.setAttribute("src", youTubeEmbed + movies.video);
         videos.appendChild(new_video);
-    
+        
+        return movies;
+
     }
 
     function getHTTPObject() {
@@ -66,36 +68,36 @@
                 text = request.responseText;
                 data = JSON.parse(text);
 
-                showMoviesData();
+                showMovies();
             }
         }
     }
 
-    function showMovie_Data() {
+    function showMovies() {
 
         var Movies = data.movies;
         var i, talk;
 
-        for (i = 0; i < Moviesovies.length; i++) {
+        for (i = 0; i < Movies.length; i++) {
             if (i === 0) {
                 targetArea.innerHTML = "";
             }
 
-            talk = Moviesovies[i];
-            targetArea.appendChild(buildMovieData(talk));
+            talk = Movies[i];
+            targetArea.appendChild(buildMovies(talk));
 
         }
     }
 
     function loadLocalData() {
         if (typeof (localStorage) === 'undefined') {
-            targetArea.innerHTML = "Sorry, local storage is not supported for this browser.";
+            targetArea.innerHTML = "Not supported by your browser.";
         } else {
-            // Do the stuff to load the page data
+           
             targetArea.innerHTML = "Loading Data...";
             text = localStorage.getItem(localStorageKey);
             if (text === null) {
-                targetArea.innerHTML = "Sorry, no local data found.";
+                targetArea.innerHTML = "No data found.";
             } else {
                 data = JSON.parse(text);
                 showMovie_Data(data);
@@ -106,10 +108,10 @@
 
     function saveDataLocally() {
         if (typeof (localStorage) === 'undefined') {
-            targetArea.innerHTML = "Sorry, local storage is not supported for this browser.";
+            targetArea.innerHTML = "Not supported by your browser.";
         } else {
             if (data === null) {
-                targetArea.innerHTML = "Sorry, you must load data before you can save.";
+                targetArea.innerHTML = "Gotta have to load the data before you can save the data.";
             } else {
                 localStorage.setItem(localStorageKey, JSON.stringify(data));
             }
@@ -118,7 +120,7 @@
 
     function clearDataLocally() {
         if (typeof (localStorage) === 'undefined') {
-            targetArea.innerHTML = "Sorry, local storage is not supported for this browser.";
+            targetArea.innerHTML = "Not supported by your browser.";
         } else {
             localStorage.removeItem(localStorageKey);
         }
@@ -131,5 +133,5 @@
     save.addEventListener("click", saveDataLocally, false);
     clear.addEventListener("click", clearDataLocally, false);
 
-    
+
 })();
