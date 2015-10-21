@@ -15,8 +15,9 @@ header {
     color: white;
     background-color: black;
     border-radius: 20%;
-    margin-left: 685px;
-    margin-right: 30px;
+    align-content: center;
+    margin-right: 50px;
+    margin-top: 30px;
 }
 #buttons #load {
     height: 75px;
@@ -24,7 +25,7 @@ header {
     color: white;
     background-color: black;
     border-radius: 20%;
-    margin-right: 30px;
+    margin-right: 50px;
 }
 #buttons #save {
     height: 75px;
@@ -32,7 +33,7 @@ header {
     color: white;
     background-color: black;
     border-radius: 20%;
-    margin-right: 30px;
+    margin-right: 50px;
 }
 #buttons #clear {
     height: 75px;
@@ -40,8 +41,7 @@ header {
     color: white;
     background-color: black;
     border-radius: 20%;
-    margin-right: 30px;
-}
+   }
 p {
     text-align: center;
     font-size: 25px;
@@ -67,6 +67,8 @@ p {
     padding: 10px 10px 10px 10px;
     background-color: black;
 }
+
+
 footer {
     position: fixed;
     bottom: 0;
