@@ -12,7 +12,7 @@
     function buildMovies(movies) {
 
         
-        movie_load = document.createElement("div");
+        main = document.createElement("main");
         
 
         movie_names = document.getElementById("movies");
@@ -40,8 +40,15 @@
         videos.setAttribute("allowfullscreen", "allowfullscreen");
         new_video.setAttribute("src", youTubeEmbed + movies.video);
         videos.appendChild(new_video);
+        
+        main.appendChild("h1");
+        main.appendChild("img");
+        main.appendChild("h2");
+        main.appendChild("iframe");
+        
+        movies.appendChild("main");
 
-        return movie_load;
+        return main;
 
     }
 
