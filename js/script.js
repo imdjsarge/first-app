@@ -1,4 +1,6 @@
 (function () {
+    
+  
 
     var fav_movies = {
         "movies": [
@@ -87,8 +89,21 @@
         videos.setAttribute("allowfullscreen", "allowfullscreen");
         new_video.setAttribute("src", youTubeEmbed + my_movies.video);
         videos.appendChild(new_video);
-       
+           
 
+    }
+    
+    function getHTTPObject() {
+        var xhr;
+        
+        if (window.XMLHttpRequest) {
+            xhr = new XMLHttpRequest();
+        }
+        else if (window.ActiveXObject) {
+            xhr = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+        
+        return xhr;
     }
 
 }());
