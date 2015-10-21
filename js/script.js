@@ -11,7 +11,9 @@
 
     function buildMovies(movies) {
 
-
+        
+        movie_load = document.createElement("div");
+        
 
         movie_names = document.getElementById("movies");
         var new_movies = document.createElement("h1");
@@ -38,8 +40,8 @@
         videos.setAttribute("allowfullscreen", "allowfullscreen");
         new_video.setAttribute("src", youTubeEmbed + movies.video);
         videos.appendChild(new_video);
-        
-        return movies;
+
+        return movie_load;
 
     }
 
@@ -93,7 +95,7 @@
         if (typeof (localStorage) === 'undefined') {
             targetArea.innerHTML = "Not supported by your browser.";
         } else {
-           
+
             targetArea.innerHTML = "Loading Data...";
             text = localStorage.getItem(localStorageKey);
             if (text === null) {
