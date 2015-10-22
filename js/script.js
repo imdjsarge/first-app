@@ -41,12 +41,9 @@
         new_video.setAttribute("src", youTubeEmbed + movies.video);
         videos.appendChild(new_video);
         
-        main.appendChild("h1");
-        main.appendChild("img");
-        main.appendChild("h2");
-        main.appendChild("iframe");
+
         
-        movies.appendChild("main");
+ 
 
         return main;
 
@@ -109,7 +106,7 @@
                 targetArea.innerHTML = "No data found.";
             } else {
                 data = JSON.parse(text);
-                showMovie_Data(data);
+                showMovies(data);
             }
         }
     }
