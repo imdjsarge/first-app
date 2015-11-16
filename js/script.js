@@ -35,26 +35,20 @@ $(document).ready(function () {
                     if (count > 0) {
                         $.each(movies, function (i, obj) {
 
-                            $.getJSON("data/movies.json", function (data) {
-
-                                $("#output").empty();
-                                if (count > 0) {
-                                    console.log(movies)
-                                    $.each(movies),
-                                        function (i, obj) {
-                                            $("#output").append("<p>" + obj.name + ">");
-                                        }
-                                }
-                            });
+                           
+                                        });
+                            
+                            }
 
                            
-                                });
                          
-                        };
-                    }
-                });
+                         
+                        }
+                    });
+               
             
-        }
+        
+    }
     };
 
     movies.movieItems();
