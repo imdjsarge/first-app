@@ -14,41 +14,27 @@ $(document).ready(function () {
     };
     firstApp.buildHeader();
 
-
-
-
-
-
-
-
-
-    // AJAX ---------------------------------------
+    // AJAX -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
     var movies = {
         movieItems: function (data) {
             $.ajax({
                 type: "get",
                 url: "data/movies.json",
                 dataType: "json",
-                success: function (data2) {
-                    var movies = data2.movies,
+                success: function (data) {
+             
+                    var movies = data.movies,
                         count = movies.length;
                     if (count > 0) {
-                        $.each(movies, function (i, obj) {
-
-                           
-                                        });
-                            
-                            }
-
-                           
-                         
-                         
-                        }
-                    });
-               
+                        $.each(movies, function (i, obj) {});
+                        console.log(data.movies);
+                    }
             
-        
-    }
+                    
+                }
+            });
+            
+        }
     };
 
     movies.movieItems();
