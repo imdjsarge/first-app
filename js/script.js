@@ -27,11 +27,15 @@ $(document).ready(function () {
                         count = movies.length;
                     if (count > 0) {
                         $.each(movies, function (i, obj) {});
-                        console.log(data.movies);
+                        console.log(Object);
                     }
             
                     
-                }
+                },
+                              error: function () {
+                alert('an ajax error occurred');
+            }
+              
             });
             
         }
@@ -39,6 +43,37 @@ $(document).ready(function () {
 
     movies.movieItems();
 
-
-
+var list = {
+    buildList: function (movies) {
+        var list = movies.buildList,
+            count = list.length;
+        if (count > 0 ) {
+            $.each(list, function (i, obj) {
+                
+                if (movies.obj.type === "Drama") {
+                    var li = $("<li>");
+                    li.append(obj.name + " " + obj.image);
+                    if (ojb.imgage !== undefined) {
+                        li.append("<img src=" + ojb.imgage + ">");
+                        console.log(list);
+                        
+                    }
+                }
+            });
+        }
+        
+    }
+    
+};
+    list.buildList();
+    
+    buildMovies = {
+        buildMovies: function (data) {
+$("<div></div>").insertAfter("p");
+    $("<li>").insertAfter("div");
+    $("<li>").append(list).insertAfter("ul");         
+            }
+    };
+    buildMovies.buildMovies();
+    
 }());
