@@ -54,19 +54,28 @@ $(document).ready(function () {
                     $("save");
                     $("clear");
                     $("button").click(function (ajax) {});
-                     $("button").click(function (load) {});
-                     $("button").click(function (save) {});
-                     $("button").click(function (clear) {});
+                    $("button").click(function (load) {});
+                    $("button").click(function (save) {});
+                    $("button").click(function (clear) {});
 
-                    list = $("<li>")
-                    list.append(obj.name + "<br></br>").insertAfter("#movies");
+                    list = $("<li>").css({
+                        color: "white",
+                        fontSize: "25px",
+                        background: "grey",
+                    });
+
+                    list.append(obj.name + "---" + obj.genre + "<br></br>").insertAfter("#movies");
 
 
                     if (obj.image !== undefined) {
-                        list.append("<img src=" + obj.image +  ">" + "<br></br>");
+                        list.append("<img src=" + obj.image + ">" + "<br></br>");
                     }
 
-
+                    video = $("<iframe>").attr("src", obj.video);
+                    if (obj.video !== undefined) {
+                        video.append("src", obj.video);
+                    }
+                    
 
 
                     //movie_names = document.getElementById("movies")
