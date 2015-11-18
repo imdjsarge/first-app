@@ -49,10 +49,10 @@ $(document).ready(function () {
             if (count > 0) {
                 $.each(movies, function (i, obj) {
 
-                    $("ajax");
-                    $("load");
-                    $("save");
-                    $("clear");
+                    $("#ajax");
+                    $("#load");
+                    $("#save");
+                    $("#clear");
                     $("button").click(function (ajax) {});
                     $("button").click(function (load) {});
                     $("button").click(function (save) {});
@@ -71,9 +71,11 @@ $(document).ready(function () {
                         list.append("<img src=" + obj.image + ">" + "<br></br>");
                     }
 
-                    video = $("<iframe>").attr("src", obj.video);
+                    video = $("#iframe")
+                        video.attr("src", obj.video);
                     if (obj.video !== undefined) {
-                        video.append("src", obj.video);
+                        video.append(obj.video);
+                        console.log(video);
                     }
                     
 
