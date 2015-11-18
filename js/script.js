@@ -67,11 +67,6 @@ $(document).ready(function () {
                     }
 
 
-                    video = $(obj.video);
-                    if (obj.video !== undefined) {
-                        video.append(obj.video).insertAfter(list);
-                    }
-
 
 
                     //movie_names = document.getElementById("movies")
