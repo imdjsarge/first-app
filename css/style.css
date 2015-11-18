@@ -9,7 +9,12 @@ header {
     font-size: 30px;
     text-decoration-color: black;
 }
+
+#buttons {
+align-items: center,
+}
 #buttons #ajax {
+  
     height: 75px;
     width: 100px;
     color: white;
