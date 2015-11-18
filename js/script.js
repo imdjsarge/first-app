@@ -53,22 +53,26 @@ $(document).ready(function () {
                     $("load");
                     $("save");
                     $("clear");
-                    
-            
+                    $("button").click(function (ajax) {});
+                     $("button").click(function (load) {});
+                     $("button").click(function (save) {});
+                     $("button").click(function (clear) {});
 
-                 list = $("<li>").append(obj.name + "<br></br>" + obj.genre + "<br></br>").insertAfter("#movies");
-                    
-                    
+                    list = $("<li>")
+                    list.append(obj.name + "<br></br>").insertAfter("#movies");
+
+
                     if (obj.image !== undefined) {
-                        list.append("<img src=" + obj.image + ">");
+                        list.append("<img src=" + obj.image +  ">" + "<br></br>");
                     }
-                    
-        
-       if (obj.video !== undefined) {
-           list.append(obj.video).insertAfter(list);
-       }
-                   
-                    
+
+
+                    video = $(obj.video);
+                    if (obj.video !== undefined) {
+                        video.append(obj.video).insertAfter(list);
+                    }
+
+
 
                     //movie_names = document.getElementById("movies")
                     //var new_movies = document.createElement("h1");
