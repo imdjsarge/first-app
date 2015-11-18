@@ -65,16 +65,14 @@ $(document).ready(function () {
                     });
 
                     list.append(obj.name + "---" + obj.genre + "<br></br>").insertAfter("#movies");
-
-
                     if (obj.image !== undefined) {
                         list.append("<img src=" + obj.image + ">" + "<br></br>");
                     }
 
-                    video = $("#iframe");
-                        video.attr("src", obj.video);
+                    video = $("<iframe>").insertAfter("#movies");
+                        
                     if (obj.video !== undefined) {
-                        video.append(obj.video);
+                        video.append("src" + obj.video);
                         console.log(video);
                     }
                     
