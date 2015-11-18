@@ -71,7 +71,7 @@ $(document).ready(function () {
                         list.append("<img src=" + obj.image + ">" + "<br></br>");
                     }
 
-                    video = $("#iframe")
+                    video = $("#iframe");
                         video.attr("src", obj.video);
                     if (obj.video !== undefined) {
                         video.append(obj.video);
