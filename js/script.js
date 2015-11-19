@@ -92,14 +92,14 @@ $(document).ready(function () {
                         fontSize: "25px",
                         background: "grey",
                     });
-
+                    $("#videos").append($("<iframe>").attr("src", obj.video));
                     list.append(obj.name + "---" + obj.genre + "<br></br>").insertAfter("#movies");
                     if (obj.image !== undefined) {
-                        list.append("<img src=" + obj.image + ">" + obj.video + "<br></br>");
+                        list.append("<img src=" + obj.image + ">" + "<br></br>");
                     }
 
 
-                    $("#videos").append($("<iframe>").attr("src" + obj.video));
+
 
                 });
 
@@ -115,11 +115,14 @@ $(document).ready(function () {
 
 
 
-firstApp.buildHeader()
+    firstApp.buildHeader()
 
-//firstApp.movieItems();
+    //firstApp.movieItems();
 
-$("#ajax").click(firstApp.movieItems); $("#load").click(firstApp.loadData); $("#save").click(firstApp.saveData); $("#clear").click(firstApp.clearData);
+    $("#ajax").click(firstApp.movieItems);
+    $("#load").click(firstApp.loadData);
+    $("#save").click(firstApp.saveData);
+    $("#clear").click(firstApp.clearData);
 
 
 
