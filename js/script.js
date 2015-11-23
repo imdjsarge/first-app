@@ -85,21 +85,30 @@ $(document).ready(function () {
             var count = movies.length;
             if (count > 0) {
                 $.each(movies, function (i, obj) {
-
+                    videoLoad = ("<div>videos</div>");
+                    movie = ("#movies");
 
                     list = $("<li>").css({
                         color: "white",
                         fontSize: "25px",
                         background: "grey",
                     });
-                    $("#videos").append($("<iframe>").attr("src", obj.video));
-                    list.append(obj.name + "---" + obj.genre + "<br></br>").insertAfter("#movies");
+                    
+                   
+                    iframe = $("<iframe>").attr("src", obj.video)
+
+                    list.append(obj.name + "---" + obj.genre + "<br></br>").insertAfter(movie);
                     if (obj.image !== undefined) {
                         list.append("<img src=" + obj.image + ">" + "<br></br>");
                     }
+                    
+                    $(iframe).css ({
+                        
+                        
+                    });
 
-
-
+                    $(movie).append(list);
+                    $(list).append(iframe);
 
                 });
 
