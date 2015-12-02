@@ -82,44 +82,47 @@ $(document).ready(function () {
 
         buildList: function (movies) {
 
-            var count = movies.length;
-            if (count > 0) {
+  
                 $.each(movies, function (i, obj) {
                     videoLoad = $("#videos");
                     movie = ("#movies");
-                    
+
 
                     list = $("<li>").css({
                         color: "white",
                         fontSize: "25px",
                         background: "grey",
                     });
-                    
-                   
-                    
-                   
-                    iframe = $("<iframe>").attr("src", obj.video)
+
+
+
+
+                    iframe = $("<iframe>").attr("src", obj.video);
+                    $(iframe).attr("class", "hide");
 
                     list.append(obj.name + "---" + obj.genre + "<br></br>").insertAfter(movie);
                     if (obj.image !== undefined) {
                         list.append("<img src=" + obj.image + ">" + "<br></br>");
                     }
-                    
-                    $(iframe).css ({
-                        
-                        
+
+                    $(iframe).css({
+
+
                     });
 
                     $(movie).append(list);
                     $(videoLoad).append(list);
                     $(videoLoad).append(iframe);
                     
+                    
+
+
 
                 });
 
 
 
-            };
+         
 
         },
     };
@@ -133,7 +136,11 @@ $(document).ready(function () {
 
     //firstApp.movieItems();
 
-    $("#ajax").click(firstApp.movieItems).hide(videoLoad);
+    $("#ajax").click(function () {
+
+        $(firstApp).show(firstApp.movieItems);
+        $(firstApp).hide(iframe);
+    });
     $("#load").click(firstApp.loadData);
     $("#save").click(firstApp.saveData);
     $("#clear").click(firstApp.clearData);
