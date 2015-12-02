@@ -82,47 +82,54 @@ $(document).ready(function () {
 
         buildList: function (movies) {
 
-  
-                $.each(movies, function (i, obj) {
-                    videoLoad = $("#videos");
-                    movie = ("#movies");
+
+            $.each(movies, function (i, obj) {
+
+                movie = ("#movies");
 
 
-                    list = $("<li>").css({
-                        color: "white",
-                        fontSize: "25px",
-                        background: "grey",
-                    });
-
-
-
-
-                    iframe = $("<iframe>").attr("src", obj.video);
-                    $(iframe).attr("class", "hide");
-
-                    list.append(obj.name + "---" + obj.genre + "<br></br>").insertAfter(movie);
-                    if (obj.image !== undefined) {
-                        list.append("<img src=" + obj.image + ">" + "<br></br>");
-                    }
-
-                    $(iframe).css({
-
-
-                    });
-
-                    $(movie).append(list);
-                    $(videoLoad).append(list);
-                    $(videoLoad).append(iframe);
-                    
-                    
-
-
-
+                list = $("<li>").css({
+                    color: "white",
+                    fontSize: "25px",
+                    background: "grey",
                 });
 
 
 
-         
+
+                iframe = $("<iframe>").attr("src", obj.video);
+                $(iframe).hide();
+
+                list.append(obj.name + "---" + obj.genre + "<br></br>").insertAfter(movie);
+                if (obj.image !== undefined) {
+                    imgID = "movie" + i;
+                    imgSrc = $("<img src=\"" + obj.image + "\" id=\"" + imgID + "\">");
+                    list.append(imgSrc);
+                    $("#" + imgID).click(function () {
+                        $(this).next().toggle();
+                        console.log($(this).next());
+                    });
+                    
+                }
+
+                $(iframe).css({
+
+
+                });
+
+                $(movie).append(list);
+
+                $(list).append(iframe);
+
+
+
+
+
+            });
+
+
+
+
 
         },
     };
@@ -139,7 +146,7 @@ $(document).ready(function () {
     $("#ajax").click(function () {
 
         $(firstApp).show(firstApp.movieItems);
-        $(firstApp).hide(iframe);
+
     });
     $("#load").click(firstApp.loadData);
     $("#save").click(firstApp.saveData);
