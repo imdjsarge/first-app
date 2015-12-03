@@ -88,11 +88,7 @@ $(document).ready(function () {
                 movie = ("#movies");
 
 
-                list = $("<li>").css({
-                    color: "white",
-                    fontSize: "25px",
-                    background: "grey",
-                });
+                list = $("<li>");
 
 
 

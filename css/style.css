@@ -2,6 +2,7 @@ body {
     background-color: darkgray;
     margin-bottom: 30px;
 }
+
 header {
     align-content: center;
     color: white;
@@ -11,10 +12,10 @@ header {
 }
 
 #buttons {
-align-items: center,
+    align-items: center,
 }
+
 #buttons #ajax {
-  
     height: 75px;
     width: 100px;
     color: white;
@@ -23,9 +24,10 @@ align-items: center,
     align-content: center;
     margin-right: 50px;
     margin-top: 30px;
+
 }
+
 #buttons #load {
-    
     height: 75px;
     width: 100px;
     color: white;
@@ -33,6 +35,7 @@ align-items: center,
     border-radius: 20%;
     margin-right: 50px;
 }
+
 #buttons #save {
     height: 75px;
     width: 100px;
@@ -41,41 +44,46 @@ align-items: center,
     border-radius: 20%;
     margin-right: 50px;
 }
+
 #buttons #clear {
     height: 75px;
- width: 100px;
+    width: 100px;
     color: white;
     background-color: black;
     border-radius: 20%;
-   }
+}
+
 p {
     text-align: center;
     font-size: 25px;
 }
-#movies h1 {
-    margin-left: 20px;
-    color: azure;
-    font-family: Georgia, "Times New Roman", serif;
-}
-#movies h2 {
-    margin-left: 20px;
-    color: azure;
-    font-style: italic;
-}
+
+
+
 #movies img {
     padding: 10px 10px 10px 10px;
     margin-left: 20px;
+    margin-right: 300px;
     background-color: black;
     align-content: center;
 }
+
 #movies iframe {
-    float: none;
-    padding: 10px 10px 10px 10px;
-    background-color: black;
+   
+    width: 600px;
+    height: 300px;
+    frameborder="0";
+    
+
 }
 
 
-
+li  {
+    color: white;
+    font-size: 25px;
+    background: grey;
+    
+}
 
 footer {
     position: fixed;
