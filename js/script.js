@@ -85,14 +85,17 @@ $(document).ready(function () {
             var count = movies.length;
             if (count > 0) {
                 $.each(movies, function (i, obj) {
-                    videoLoad = ("<div>videos</div>");
+                    videoLoad = $("#videos");
                     movie = ("#movies");
+                    
 
                     list = $("<li>").css({
                         color: "white",
                         fontSize: "25px",
                         background: "grey",
                     });
+                    
+                   
                     
                    
                     iframe = $("<iframe>").attr("src", obj.video)
@@ -108,7 +111,9 @@ $(document).ready(function () {
                     });
 
                     $(movie).append(list);
-                    $(list).append(iframe);
+                    $(videoLoad).append(list);
+                    $(videoLoad).append(iframe);
+                    
 
                 });
 
@@ -128,7 +133,7 @@ $(document).ready(function () {
 
     //firstApp.movieItems();
 
-    $("#ajax").click(firstApp.movieItems);
+    $("#ajax").click(firstApp.movieItems).hide(videoLoad);
     $("#load").click(firstApp.loadData);
     $("#save").click(firstApp.saveData);
     $("#clear").click(firstApp.clearData);
